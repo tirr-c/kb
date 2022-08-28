@@ -23,10 +23,10 @@ jobs:
     - name: Setup wrangler
       run: yarn global add wrangler
     - name: Deploy
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: tirr-kb
-          directory: book
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      uses: cloudflare/pages-action@1
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        projectName: tirr-kb
+        directory: book
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
