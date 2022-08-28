@@ -1,0 +1,6 @@
+[book]
+title = "티르 지식창고"
+authors = ["Wonwoo Choi <chwo9843@gmail.com>"]
+language = "ko"
+multilingual = false
+src = "src"
