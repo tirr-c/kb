@@ -21,6 +21,7 @@ jobs:
     - name: Build
       run: mdbook build
     - name: Deploy
+      id: deploy
       uses: cloudflare/pages-action@1
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -28,3 +29,11 @@ jobs:
         projectName: tirr-kb
         directory: book
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+    - name: Update summary
+      env:
+        DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+      run: |
+        echo """
+        ## :rocket: Deployed successfully
+        URL: ${DEPLOY_URL}
+        """ > $GITHUB_STEP_SUMMARY
