@@ -3,7 +3,7 @@
 기능이 init process일 것이다. systemd 시스템에서 htop 등으로 프로세스 목록을 찍어 보면 맨 위에 위엄
 넘치는 `systemd`의 모습을 확인할 수 있다.
 
-\[여기에 스크린샷 입력\]
+![htop에 PID 1으로 systemd가 있는 모습](./res/pid-1.png)
 
 systemd가 하는 일은 다양한데...
 - 시스템 서비스의 실행과 종속성 관리 ([`systemctl`][systemctl.1])
